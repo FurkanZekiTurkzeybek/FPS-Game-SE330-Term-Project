@@ -41,12 +41,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\UI\ArmourUIScript.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\PlayerStats.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\MedkitScript.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Sword\Sword.cs" />
      <Compile Include="Assets\_Scripts\Enemy\MeleeEnemy.cs" />
      <Compile Include="Assets\_Scripts\UI\ReloadUIScript.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\WeaponWheel.cs" />
+     <Compile Include="Assets\_Scripts\UI\PlayerStatsUI.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\AmmoPackScript.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\CharacterWalk.cs" />
      <Compile Include="Assets\_Scripts\Weapons\RifleScript.cs" />
@@ -57,15 +59,13 @@
      <Compile Include="Assets\_Scripts\UI\HealthArmourUIScript.cs" />
      <Compile Include="Assets\_Scripts\Enemy\EnemyAI.cs" />
      <Compile Include="Assets\_Scripts\Enemy\EnemyRifle.cs" />
+     <Compile Include="Assets\_Scripts\UI\HealthUIScript.cs" />
      <Compile Include="Assets\_Scripts\UI\HitUIScript.cs" />
      <Compile Include="Assets\_Scripts\Enemy\EnemyStats.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\ArmourPackScript.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\CameraFollow.cs" />
      <Compile Include="Assets\_Scripts\PowerUps\PowerUps.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\CollectibleScript.cs" />
-     <Compile Include="Assets\_Scripts\UI\HealthUIScript.cs" />
-     <Compile Include="Assets\_Scripts\UI\ArmourUIScript.cs" />
-     <Compile Include="Assets\_Scripts\UI\PlayerStatsUI.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -73,6 +73,7 @@
      <Folder Include="Assets\_Scripts\UI" />
      <Folder Include="Assets\_Scripts\Weapons" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
+     <Folder Include="Assets\Materials\UIMaterials" />
      <Folder Include="Assets\_Scripts\Protagonist" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Animations\WeaponAnimations\RifleAnimations" />

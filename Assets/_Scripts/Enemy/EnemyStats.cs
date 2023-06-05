@@ -1,16 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class EnemyStats : MonoBehaviour {
     private int _health = 100;
     private Animator _animator;
     private LineRenderer[] _healthBar;
+    private Color _initialColour;
 
 
     public void recieveDamage(int damageReceived) {
+        getShotTween();
         _health -= damageReceived;
+    }
+
+    private void getShotTween() {
+        float tweenTime = 0.15f;
+        Material enemyMaterial = gameObject.GetComponent<Renderer>().material;
+        enemyMaterial.DOColor(Color.red, tweenTime).SetLoops(1, LoopType.Restart)
+            .OnComplete(() => {
+                enemyMaterial.DOColor(_initialColour, tweenTime)
+                    .SetLoops(1, LoopType.Restart);
+            });
     }
 
     public void die() {
@@ -36,11 +49,14 @@ public class EnemyStats : MonoBehaviour {
         }
     }
 
+    private void changeColourOnShot() { }
+
 
     // Start is called before the first frame update
     void Start() {
         _animator = gameObject.GetComponent<Animator>();
         _healthBar = gameObject.GetComponentsInChildren<LineRenderer>();
+        _initialColour = gameObject.GetComponent<Renderer>().material.color;
     }
 
     // Update is called once per frame
