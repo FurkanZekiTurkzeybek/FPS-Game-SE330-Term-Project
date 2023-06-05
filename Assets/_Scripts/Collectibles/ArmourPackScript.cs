@@ -7,7 +7,7 @@ public class ArmourPackScript : CollectibleScript {
         base.OnTriggerEnter(other);
         if (other.gameObject.GetComponent<PlayerStats>()) {
             // Destroy(gameObject);
-            other.gameObject.GetComponent<PlayerStats>().increaseArmour(50);
+            other.gameObject.GetComponent<PlayerStats>().increaseArmour(40);
         }
     }
 

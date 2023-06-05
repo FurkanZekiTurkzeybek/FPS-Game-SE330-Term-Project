@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour {
     private int _health = 100;
-    // private int _damage = 10;
     private Animator _animator;
     private LineRenderer[] _healthBar;
 

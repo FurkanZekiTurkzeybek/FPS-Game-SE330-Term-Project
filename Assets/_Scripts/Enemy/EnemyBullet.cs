@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyBullet : Bullet {
-    private int _enemyBulletDamage = 10;
+    private int _enemyBulletDamage = 20;
     protected override void OnTriggerEnter(Collider other) {
         if (other.gameObject.GetComponent<PlayerStats>()) {
             setTarget(other.gameObject);
