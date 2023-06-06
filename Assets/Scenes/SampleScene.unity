@@ -146,7 +146,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2518871}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2.8}
+  m_AnchoredPosition: {x: 0, y: -2.8000002}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &10824456
@@ -373,7 +373,7 @@ RectTransform:
   m_GameObject: {fileID: 93841817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.04, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 150715463}
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.0019526482, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.003921569, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -445,7 +445,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150715462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -526,6 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 204900772}
+  symbolTransform: {fileID: 150715463}
 --- !u!1 &295121473
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 204900772}
+  symbolTransform: {fileID: 2518872}
 --- !u!1 &679662561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,6 +2417,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 204900772, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
+      propertyPath: playerStatsUI
+      value: 
+      objectReference: {fileID: 250315014}
+    - target: {fileID: 204900772, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
+      propertyPath: armourUIScript
+      value: 
+      objectReference: {fileID: 663558290}
+    - target: {fileID: 204900772, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
+      propertyPath: healthUIScript
+      value: 
+      objectReference: {fileID: 250315014}
     - target: {fileID: 172493813311539497, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2736,7 +2750,7 @@ RectTransform:
   m_GameObject: {fileID: 1568841165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.03, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.07, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 150715463}

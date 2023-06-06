@@ -1,14 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
+using Vector3 = UnityEngine.Vector3;
 
 public class PlayerStatsUI : MonoBehaviour {
     //This class is some kind of "Abstract class" it's not used in any game object, instead it used as a interface for
     //HealthUI and ArmourUI scripts
     public PlayerStats playerStats;
+
+    public RectTransform symbolTransform;
+
+    // private Image[] _symbolImages;
+    // public Image symbolUpperPart;
+    // public Image symbolLowerPart;
+    // private Color _symbolInitialColour;
 
     protected void checkForStats(Func<int> statFunction, UnityEngine.UI.Image[] arrayOfBars) {
         if (statFunction() >= 80 && statFunction() < 100) {
@@ -58,6 +67,22 @@ public class PlayerStatsUI : MonoBehaviour {
             arrayOfBars[1].enabled = false;
             arrayOfBars[0].enabled = false;
         }
+    }
+
+    // internal void changeColour() {
+    //     float tweenDuration = 0.40f;
+    //     symbolUpperPart.material.DOColor(Color.red, tweenDuration).OnComplete(() => {
+    //         symbolUpperPart.material.DOColor(_symbolInitialColour, tweenDuration);
+    //     });
+    //     symbolUpperPart.color = _symbolInitialColour;
+    // }
+
+    public void changeSymbolSize() {
+        float tweenTime = 0.40f;
+
+        symbolTransform.transform.DOScale(Vector3.one * 1.5f, tweenTime).OnComplete(() => {
+            symbolTransform.transform.DOScale(Vector3.one, tweenTime);
+        });
     }
 
 

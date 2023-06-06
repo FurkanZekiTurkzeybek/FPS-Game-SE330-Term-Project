@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour {
+    public HealthUIScript healthUIScript;
+    public ArmourUIScript armourUIScript;
     private int _health = 100;
     private int _armour = 0;
     private bool isDead = false;
@@ -37,6 +39,7 @@ public class PlayerStats : MonoBehaviour {
     }
 
     public void increaseHealth(int healthToBeAdded) {
+        healthUIScript.changeSymbolSize();
         if (getHealth() < 100) {
             if (getHealth() + healthToBeAdded > 100) {
                 _health = 100;
@@ -52,6 +55,7 @@ public class PlayerStats : MonoBehaviour {
 
 
     public void increaseArmour(int armourToBeAdded) {
+        armourUIScript.changeSymbolSize();
         if (_armour < 100) {
             if (_armour + armourToBeAdded > 100) {
                 _armour = 100;
