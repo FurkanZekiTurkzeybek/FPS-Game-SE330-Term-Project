@@ -11,8 +11,7 @@ public class EnemyStats : MonoBehaviour {
     private Color _initialColour;
 
 
-    public void recieveDamage(int damageReceived) {
-        getShotTween();
+    private void recieveDamage(int damageReceived) {
         _health -= damageReceived;
     }
 
@@ -26,7 +25,7 @@ public class EnemyStats : MonoBehaviour {
             });
     }
 
-    public void die() {
+    private void die() {
         // _animator.SetTrigger("die");
         // Destroy(gameObject);
 
@@ -40,6 +39,8 @@ public class EnemyStats : MonoBehaviour {
     }
 
     public void getShot(int damageToBeReceived) {
+        getShotTween();
+
         if (damageToBeReceived >= _health) {
             die();
         }

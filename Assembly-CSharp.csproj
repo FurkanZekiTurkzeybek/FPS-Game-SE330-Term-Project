@@ -48,11 +48,13 @@
      <Compile Include="Assets\_Scripts\Enemy\MeleeEnemy.cs" />
      <Compile Include="Assets\_Scripts\UI\ReloadUIScript.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\WeaponWheel.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Rocket Launcher\Rocket.cs" />
      <Compile Include="Assets\_Scripts\UI\PlayerStatsUI.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\AmmoPackScript.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\CharacterWalk.cs" />
-     <Compile Include="Assets\_Scripts\Weapons\RifleScript.cs" />
-     <Compile Include="Assets\_Scripts\Weapons\Bullet.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Rifle\RifleScript.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Rocket Launcher\RocketLauncherScript.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Rifle\Bullet.cs" />
      <Compile Include="Assets\_Scripts\Enemy\RangedEnemy.cs" />
      <Compile Include="Assets\_Scripts\Enemy\EnemyBullet.cs" />
      <Compile Include="Assets\_Scripts\UI\AmmunitionUIScript.cs" />
@@ -91,6 +93,7 @@
      <Folder Include="Assets\Animations" />
      <Folder Include="Assets\Materials\CollectibleMaterials" />
      <Folder Include="Assets\Animations\WeaponAnimations\SwordAnimations" />
+     <Folder Include="Assets\Materials\WeaponMaterials\RPG" />
      <Folder Include="Assets\Materials\WeaponMaterials" />
      <Folder Include="Assets\Prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -110,9 +113,11 @@
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <Folder Include="Assets\Resources" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Assets\_Scripts\Weapons\Rifle" />
      <Folder Include="Assets\Prefabs\Collectibles" />
      <Folder Include="Assets\Prefabs\Enemy" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <Folder Include="Assets\_Scripts\Weapons\Rocket Launcher" />
      <Folder Include="Assets\_Scripts" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />

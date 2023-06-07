@@ -9,7 +9,7 @@ public class EnemyRifle : RifleScript {
     public IEnumerator fire(bool enemyDetected) {
         if (inCD == false) {
             inCD = true;
-            shootBullet();
+            shoot();
             yield return new WaitForSeconds(cdTime);
             inCD = false;
         }

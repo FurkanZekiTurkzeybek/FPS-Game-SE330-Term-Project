@@ -6,12 +6,12 @@ using UnityEngine;
 public class RifleScript : MonoBehaviour {
     private int _ammoCount = 50;
     private int _ammoInMag = 10;
-    private Rigidbody prefabBullet;
+    private Rigidbody _prefabBullet;
     public Rigidbody bullet;
     private Animator _magazineAnimator;
     private bool _hasToReload = false;
     private bool _outOfAmmo = false;
-    
+
     protected float _bulletSpeed = 75;
 
     public void addAmmo(int bulletToBeAdded) {
@@ -43,7 +43,7 @@ public class RifleScript : MonoBehaviour {
         while (true) {
             if (Input.GetKey(KeyCode.Mouse0)) {
                 if (_ammoInMag > 0) {
-                    shootBullet();
+                    shoot();
                     _ammoInMag--;
                     yield return new WaitForSeconds(0.30f);
                 }
@@ -60,19 +60,16 @@ public class RifleScript : MonoBehaviour {
         }
     }
 
-    protected void shootBullet() { //I made this in a different method so I can overwrite it in the enemy rifle
-        prefabBullet = Instantiate(bullet, transform.position, transform.rotation);
-        prefabBullet.velocity = transform.forward * _bulletSpeed;
+    protected virtual void shoot() { //I made this in a different method so I can overwrite it in the enemy rifle
+        _prefabBullet = Instantiate(bullet, transform.position, transform.rotation);
+        _prefabBullet.velocity = transform.forward * _bulletSpeed;
     }
 
 
     // Start is called before the first frame update
-    protected virtual void Start() {
-        // _magazineAnimator = gameObject.GetComponentInChildren<Animator>();
-        // StartCoroutine(fire());
-    }
+    protected virtual void Start() { }
 
-    private void OnEnable() {
+    protected void OnEnable() {
         _magazineAnimator = gameObject.GetComponentInChildren<Animator>();
         StartCoroutine(fire());
     }

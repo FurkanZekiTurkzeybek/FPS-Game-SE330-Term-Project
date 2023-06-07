@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
-    private Vector3 _currentLocation;
+    protected Vector3 currentLocation;
     private int _bulletDamage = 10;
     protected GameObject _targetEnemy;
     protected PlayerStats _playerStats;
@@ -28,14 +28,14 @@ public class Bullet : MonoBehaviour {
     // Start is called before the first frame update
 
     protected virtual void Start() {
-        _currentLocation = transform.position;
+        currentLocation = transform.position;
         _playerStats = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<PlayerStats>();
     }
 
 
     // Update is called once per frame
-    public virtual void Update() {
-        if (Vector3.Distance(_currentLocation, gameObject.transform.position) > 15) {
+    protected virtual void Update() {
+        if (Vector3.Distance(currentLocation, gameObject.transform.position) > 15) {
             Destroy(gameObject);
         }
 

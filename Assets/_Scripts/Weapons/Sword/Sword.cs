@@ -20,7 +20,7 @@ public class Sword : MonoBehaviour {
         if (other.gameObject.GetComponent<EnemyStats>() && _swinging) {
             _player.setEnemyShot();
             _targetEnemy = other.gameObject;
-            _targetEnemy.GetComponent<EnemyStats>().recieveDamage(_damage);
+            _targetEnemy.GetComponent<EnemyStats>().getShot(_damage);
         }
     }
 
