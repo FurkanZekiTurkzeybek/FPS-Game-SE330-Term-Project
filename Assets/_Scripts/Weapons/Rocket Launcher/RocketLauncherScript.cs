@@ -9,7 +9,6 @@ public class RocketLauncherScript : RifleScript {
     protected override IEnumerator fire() {
         while (true) {
             if (Input.GetKey(KeyCode.Mouse0)) {
-                Debug.Log($"{GetType().Name}: Rocket is fired");
                 shoot();
                 yield return new WaitForSeconds(1f);
             }
@@ -28,7 +27,7 @@ public class RocketLauncherScript : RifleScript {
     void Start() { }
 
     protected void OnEnable() {
-        _bulletSpeed = 5f;
+        _bulletSpeed = 10f;
         StartCoroutine(fire());
     }
 
