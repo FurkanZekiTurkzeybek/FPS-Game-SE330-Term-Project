@@ -10,7 +10,7 @@ public class CollectibleScript : MonoBehaviour {
     private bool _isDestroyed = false;
 
     protected void OnTriggerEnter(Collider other) {
-        if (!_isDestroyed) {
+        if (!_isDestroyed && other.gameObject.GetComponent<PlayerStats>()) {
             _isDestroyed = true;
             transform.DOScale(_collectibleInitialScale * 2, _tweenPlayTime)
                 .OnComplete(() =>

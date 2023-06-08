@@ -19,7 +19,8 @@ public class RocketLauncherScript : RifleScript {
     }
 
     protected override void shoot() {
-        _prefabrocket = Instantiate(bullet, transform.position, transform.rotation);
+        _prefabrocket = Instantiate(bullet, transform.position, Quaternion.Euler(
+            new Vector3(transform.eulerAngles.x + 90, transform.eulerAngles.y, transform.eulerAngles.z)));
         _prefabrocket.velocity = transform.forward * _bulletSpeed;
     }
 
@@ -27,7 +28,7 @@ public class RocketLauncherScript : RifleScript {
     void Start() { }
 
     protected void OnEnable() {
-        _bulletSpeed = 20f;
+        _bulletSpeed = 5f;
         StartCoroutine(fire());
     }
 
