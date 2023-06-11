@@ -14,21 +14,21 @@ public class RifleScript : RangedWeapon {
 
     // protected float _bulletSpeed = 75;
 
-    public override void addAmmo(int bulletToBeAdded) {
-        _ammoCount += bulletToBeAdded;
-    }
+    // public override void addAmmo(int bulletToBeAdded) {
+    //     _ammoCount += bulletToBeAdded;
+    // }
 
-    public override int getAmmo() {
-        return _ammoCount;
-    }
+    // public override int getAmmo() {
+    //     return _ammoCount;
+    // }
 
     public int getAmmoInBullet() {
         return _ammoInMag;
     }
 
-    public override void resetAmmo() { //this method is used when the player dies.
-        _ammoCount = 10;
-    }
+    // public override void resetAmmo() { //this method is used when the player dies.
+    //     _ammoCount = 10;
+    // }
 
     public bool getReloadBool() {
         return _hasToReload;

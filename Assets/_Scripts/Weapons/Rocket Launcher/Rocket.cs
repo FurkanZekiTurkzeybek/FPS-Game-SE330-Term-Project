@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class Rocket : Bullet {
+public class Rocket : Ammunition {
     private int _rocketDamage = 60;
     private CapsuleCollider _rocketCollider;
     private Vector3 _rocketInitialScale;
@@ -33,7 +33,7 @@ public class Rocket : Bullet {
 
 
     // Start is called before the first frame update
-    void Start() {
+    protected override void Start() {
         base.Start();
         _rocketCollider = gameObject.GetComponent<CapsuleCollider>();
         _rocketInitialScale = gameObject.transform.localScale;
@@ -43,9 +43,10 @@ public class Rocket : Bullet {
 
     // Update is called once per frame
     protected override void Update() {
-        if (Vector3.Distance(currentLocation, gameObject.transform.position) > 15) {
-            Destroy(gameObject);
-        }
+        // if (Vector3.Distance(currentLocation, gameObject.transform.position) > 15) {
+        //     Destroy(gameObject);
+        // }
+        base.Update();
 
         Destroy(gameObject, 10f);
     }

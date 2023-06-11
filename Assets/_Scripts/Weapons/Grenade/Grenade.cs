@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class Grenade : Bullet {
+public class Grenade : Ammunition {
     private int _grenadeDamage = 80;
     private SphereCollider _grenadeCollider;
     private Vector3 _grenadeInitialScale;
