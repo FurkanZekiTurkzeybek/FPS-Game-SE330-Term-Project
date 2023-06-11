@@ -27,7 +27,7 @@ public class ThrowGrenade : RifleScript {
     void Start() { }
 
     protected void OnEnable() {
-        _bulletSpeed = 1f;
+        _bulletSpeed = 10f;
         StartCoroutine(fire());
     }
 

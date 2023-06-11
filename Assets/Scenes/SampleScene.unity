@@ -2655,6 +2655,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 113837578, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 204900772, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
       propertyPath: armourUIScript
       value: 
@@ -2663,6 +2667,10 @@ PrefabInstance:
       propertyPath: healthUIScript
       value: 
       objectReference: {fileID: 250315014}
+    - target: {fileID: 728398943, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.975
+      objectReference: {fileID: 0}
     - target: {fileID: 6637337397046427200, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
       propertyPath: m_Name
       value: Char

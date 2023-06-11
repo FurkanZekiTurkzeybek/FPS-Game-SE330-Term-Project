@@ -27,7 +27,7 @@ public class RocketLauncherScript : RifleScript {
     void Start() { }
 
     protected void OnEnable() {
-        _bulletSpeed = 10f;
+        _bulletSpeed = 1f;
         StartCoroutine(fire());
     }
 
