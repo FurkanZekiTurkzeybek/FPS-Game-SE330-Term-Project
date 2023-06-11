@@ -22,7 +22,7 @@ public class EnemyRifle : RifleScript {
 
     // Start is called before the first frame update
     protected override void Start() {
-        _bulletSpeed = 25;
+        _ammoSpeed = 25;
     }
 
     // Update is called once per frame

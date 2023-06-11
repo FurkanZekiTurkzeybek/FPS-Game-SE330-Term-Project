@@ -17,7 +17,8 @@ public class Rocket : Bullet {
         if (_isDestroyed == false && other.gameObject.GetComponent<EnemyStats>()) {
             transform.DOMove(transform.position, twennPlayTime).OnPlay(() => {
                 transform.DOScale(_rocketInitialScale * explosionScale, twennPlayTime).OnPlay(() => {
-                        gameObject.GetComponent<Renderer>().material.DOColor(Color.yellow, twennPlayTime).OnPlay(() => {
+                        gameObject.GetComponent<Renderer>().material.DOColor(Color.yellow, 
+                            twennPlayTime/8).OnPlay(() => {
                             _rocketCollider.radius = explosionScale;
                             _rocketCollider.height = explosionScale;
                             _playerStats.setEnemyShot();

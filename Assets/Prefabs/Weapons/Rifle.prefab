@@ -557,4 +557,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a43b0c320da345341a435494d5c37a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1148356819882752214, guid: c3fd130550a89ec49aa85d19f78b6e49, type: 3}
+  ammunition: {fileID: 1148356819882752214, guid: c3fd130550a89ec49aa85d19f78b6e49, type: 3}

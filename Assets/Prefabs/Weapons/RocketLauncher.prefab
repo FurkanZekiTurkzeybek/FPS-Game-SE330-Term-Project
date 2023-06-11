@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1dddda5d2296f4190dd59855e649dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: -5883102485036056042, guid: 370dfef3020ad3a42881f7d1f1a416ec, type: 3}
+  ammunition: {fileID: -5883102485036056042, guid: 370dfef3020ad3a42881f7d1f1a416ec, type: 3}
 --- !u!1 &3136014375731182868
 GameObject:
   m_ObjectHideFlags: 0

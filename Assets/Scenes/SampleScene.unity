@@ -2667,6 +2667,10 @@ PrefabInstance:
       propertyPath: healthUIScript
       value: 
       objectReference: {fileID: 250315014}
+    - target: {fileID: 728398942, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
+      propertyPath: ammunition
+      value: 
+      objectReference: {fileID: -5019997777875895984, guid: 358eeeef1bf7b684f81bc6c4b1beb84f, type: 3}
     - target: {fileID: 728398943, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.975
