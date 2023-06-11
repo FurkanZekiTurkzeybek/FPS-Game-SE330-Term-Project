@@ -46,6 +46,10 @@ public class PlayerStats : MonoBehaviour {
     public void setEnemyShot() {
         StartCoroutine(setShot());
     }
+    
+    public void reload() {
+        _bulletCount -= 10;
+    }
 
     private IEnumerator setShot() {
         if (_enemyShot == false) {

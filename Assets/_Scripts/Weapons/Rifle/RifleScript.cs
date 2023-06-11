@@ -34,7 +34,8 @@ public class RifleScript : RangedWeapon {
             }
             else if (Input.GetKey(KeyCode.R) && _ammoCount >= 10) {
                 _ammoInMag = 10;
-                _ammoCount -= 10;
+                playerStats.reload();
+                // _ammoCount -= 10;
                 //Play the reload animation.
                 _magazineAnimator.SetTrigger("reloadPressed");
                 yield return new WaitForSeconds(1f);
