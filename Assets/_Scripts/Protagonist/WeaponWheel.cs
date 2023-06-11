@@ -6,6 +6,7 @@ public class WeaponWheel : MonoBehaviour {
     public GameObject playersRifle;
     public GameObject playersSword;
     public GameObject playersRPG;
+    public GameObject playersGrenade;
 
     // Start is called before the first frame update
     void Start() { }
@@ -16,17 +17,26 @@ public class WeaponWheel : MonoBehaviour {
             playersRifle.SetActive(true);
             playersSword.SetActive(false);
             playersRPG.SetActive(false);
+            playersGrenade.SetActive(false);
         }
 
         else if (Input.GetKey(KeyCode.Alpha2)) {
             playersRifle.SetActive(false);
             playersSword.SetActive(true);
             playersRPG.SetActive(false);
+            playersGrenade.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.Alpha3)) {
             playersRifle.SetActive(false);
             playersSword.SetActive(false);
             playersRPG.SetActive(true);
+            playersGrenade.SetActive(false);
+        }
+        else if (Input.GetKey(KeyCode.G)) {
+            playersRifle.SetActive(false);
+            playersSword.SetActive(false);
+            playersRPG.SetActive(false);
+            playersGrenade.SetActive(true);
         }
     }
 }

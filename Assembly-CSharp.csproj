@@ -45,6 +45,7 @@
      <Compile Include="Assets\_Scripts\Protagonist\PlayerStats.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\MedkitScript.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Sword\Sword.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Grenade\ThrowGrenade.cs" />
      <Compile Include="Assets\_Scripts\Enemy\MeleeEnemy.cs" />
      <Compile Include="Assets\_Scripts\UI\ReloadUIScript.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\WeaponWheel.cs" />
@@ -53,6 +54,7 @@
      <Compile Include="Assets\_Scripts\Collectibles\AmmoPackScript.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\CharacterWalk.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Rifle\RifleScript.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\Grenade\Grenade.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Rocket Launcher\RocketLauncherScript.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Rifle\Bullet.cs" />
      <Compile Include="Assets\_Scripts\Enemy\RangedEnemy.cs" />
@@ -79,6 +81,7 @@
      <Folder Include="Assets\_Scripts\Protagonist" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Animations\WeaponAnimations\RifleAnimations" />
+     <Folder Include="Assets\_Scripts\Weapons\Grenade" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />

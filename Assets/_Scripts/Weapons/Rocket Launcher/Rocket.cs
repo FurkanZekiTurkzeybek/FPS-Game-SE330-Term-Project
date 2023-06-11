@@ -11,17 +11,19 @@ public class Rocket : Bullet {
     private bool _isDestroyed = false;
 
     protected override void OnTriggerEnter(Collider other) {
-        float explosionScale = 4f;
+        float explosionScale = 5f;
         float twennPlayTime = 1f;
+
         if (_isDestroyed == false && other.gameObject.GetComponent<EnemyStats>()) {
             transform.DOMove(transform.position, twennPlayTime).OnPlay(() => {
                 transform.DOScale(_rocketInitialScale * explosionScale, twennPlayTime).OnPlay(() => {
-                        gameObject.GetComponent<Renderer>().material.DOColor(Color.yellow, twennPlayTime);
-                        _rocketCollider.radius = explosionScale;
-                        _rocketCollider.height = explosionScale;
-                        _playerStats.setEnemyShot();
-                        _targetEnemy = other.gameObject;
-                        _targetEnemy.gameObject.GetComponent<EnemyStats>().getShot(_rocketDamage);
+                        gameObject.GetComponent<Renderer>().material.DOColor(Color.yellow, twennPlayTime).OnPlay(() => {
+                            _rocketCollider.radius = explosionScale;
+                            _rocketCollider.height = explosionScale;
+                            _playerStats.setEnemyShot();
+                            _targetEnemy = other.gameObject;
+                            _targetEnemy.gameObject.GetComponent<EnemyStats>().getShot(_rocketDamage);
+                        });
                     })
                     .OnComplete(() => Destroy(gameObject)).OnComplete(() => _isDestroyed = true);
             });
