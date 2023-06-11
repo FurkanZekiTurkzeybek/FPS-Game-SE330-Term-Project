@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class CollectibleScript : MonoBehaviour {
+public abstract class CollectibleScript : MonoBehaviour {
     private Vector3 _collectibleInitialScale;
     private float _tweenPlayTime = 0.5f;
     private bool _isDestroyed = false;

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1272604469540859754}
   - component: {fileID: 2546882731572612678}
   - component: {fileID: 7719013797567755728}
-  - component: {fileID: 4406319864673966350}
+  - component: {fileID: 6898423792627933635}
   m_Layer: 0
-  m_Name: AmmoPack
+  m_Name: RocketPack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 75a9746f07ba1e647be4369fa13d8be2, type: 2}
+  - {fileID: 2100000, guid: 9aad6b03a51e8c442af4f5924ed8e0de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4406319864673966350
+--- !u!114 &6898423792627933635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,6 +107,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7277925249740569248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bc29dc8c4b766e4baf595f09a2b20d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 12ed204faa69a464fb35a61f35cbe6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

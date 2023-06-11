@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AmmoPackScript : CollectibleScript {
+public class GrenadePackScript : CollectibleScript {
     void OnTriggerEnter(Collider other) {
         base.OnTriggerEnter(other);
         if (other.gameObject.GetComponent<PlayerStats>()) {
             // Destroy(gameObject);
-            other.gameObject.GetComponentInChildren<RifleScript>().addAmmo(10);
+            other.gameObject.GetComponentInChildren<ThrowGrenade>().addAmmo(2);
         }
     }
 
