@@ -7,7 +7,7 @@ public class BulletPackScript : CollectibleScript {
         base.OnTriggerEnter(other);
         if (other.gameObject.GetComponent<PlayerStats>()) {
             // Destroy(gameObject);
-            other.gameObject.GetComponentInChildren<RifleScript>().addAmmo(10);
+            other.gameObject.GetComponentInChildren<PlayerStats>().addBullet(10);
         }
     }
 

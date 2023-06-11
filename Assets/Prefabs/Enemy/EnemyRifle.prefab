@@ -437,4 +437,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ccc8984708f1a40a86d6aba1d049c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1148356819882752214, guid: 7dcae97ccea37bd41a41ce539d7f3879, type: 3}
+  ammunition: {fileID: 1148356819882752214, guid: 7dcae97ccea37bd41a41ce539d7f3879, type: 3}
+  playerStats: {fileID: 204900772, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}

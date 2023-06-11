@@ -7,7 +7,7 @@ public class GrenadePackScript : CollectibleScript {
         base.OnTriggerEnter(other);
         if (other.gameObject.GetComponent<PlayerStats>()) {
             // Destroy(gameObject);
-            other.gameObject.GetComponentInChildren<ThrowGrenade>().addAmmo(2);
+            other.gameObject.GetComponentInChildren<PlayerStats>().addGrenade(2);
         }
     }
 

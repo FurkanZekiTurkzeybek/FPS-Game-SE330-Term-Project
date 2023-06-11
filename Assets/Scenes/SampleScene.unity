@@ -277,6 +277,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1802194138}
     m_Modifications:
+    - target: {fileID: 5433298666480301434, guid: dd8cacd08bcf69f42a7607660f47d9d2, type: 3}
+      propertyPath: ammunition
+      value: 
+      objectReference: {fileID: 1148356819882752214, guid: c3fd130550a89ec49aa85d19f78b6e49, type: 3}
+    - target: {fileID: 5433298666480301434, guid: dd8cacd08bcf69f42a7607660f47d9d2, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 204900772}
     - target: {fileID: 6471994563833272053, guid: dd8cacd08bcf69f42a7607660f47d9d2, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1524,7 +1532,6 @@ GameObject:
   - component: {fileID: 864787650}
   - component: {fileID: 864787649}
   - component: {fileID: 864787648}
-  - component: {fileID: 864787651}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -1592,27 +1599,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &864787651
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864787647}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: babb409fd821b3f4fbcba52500b00c5d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &926386150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,10 +2779,22 @@ PrefabInstance:
       propertyPath: ammunition
       value: 
       objectReference: {fileID: -5019997777875895984, guid: 358eeeef1bf7b684f81bc6c4b1beb84f, type: 3}
+    - target: {fileID: 728398942, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 204900772}
     - target: {fileID: 728398943, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.975
       objectReference: {fileID: 0}
+    - target: {fileID: 172493813311539497, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 204900772}
+    - target: {fileID: 5410076694375099172, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 204900772}
     - target: {fileID: 6637337397046427200, guid: 15fa14dc25212fc4fa122bcb742f56fa, type: 3}
       propertyPath: m_Name
       value: Char

@@ -10,6 +10,35 @@ public class PlayerStats : MonoBehaviour {
     private bool isDead = false;
     private bool _enemyShot = false;
 
+    private int _bulletCount = 50;
+    private int _rocketCount = 10;
+    private int _grenadeCount = 3;
+
+    public void addBullet(int bulletToBeAdded) {
+        _bulletCount += bulletToBeAdded;
+    }
+
+    public void addRocket(int rocketToBeAdded) {
+        _rocketCount += rocketToBeAdded;
+    }
+
+    public void addGrenade(int grenadeToBeAdded) {
+        _grenadeCount += grenadeToBeAdded;
+    }
+
+    public int getBulletCount() {
+        return _bulletCount;
+    }
+
+    public int getRocketCount() {
+        return _rocketCount;
+    }
+
+    public int getGrenadeCount() {
+        return _grenadeCount;
+    }
+
+
     public bool getEnemyShot() {
         return _enemyShot;
     }
@@ -92,7 +121,11 @@ public class PlayerStats : MonoBehaviour {
     }
 
     // Start is called before the first frame update
-    void Start() { }
+    void Start() {
+        // _bulletCount = 50;
+        // _rocketCount = 10;
+        // _grenadeCount = 3;
+    }
 
     // Update is called once per frame
     void Update() {

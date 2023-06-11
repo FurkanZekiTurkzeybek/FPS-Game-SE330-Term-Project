@@ -6,7 +6,7 @@ public class ThrowGrenade : RangedWeapon {
     private Rigidbody _prefabGrenade;
 
     public override void addAmmo(int grenadeToBeAdded) {
-        _ammoCount += grenadeToBeAdded;
+        playerStats.addGrenade(grenadeToBeAdded);
     }
 
 
@@ -30,14 +30,17 @@ public class ThrowGrenade : RangedWeapon {
 
     // Start is called before the first frame update
     void Start() {
-        _ammoCount = 3;
+        _ammoCount = playerStats.getGrenadeCount();
     }
 
     protected void OnEnable() {
+        _ammoCount = playerStats.getGrenadeCount();
         _ammoSpeed = 10f;
         StartCoroutine(fire());
     }
 
     // Update is called once per frame
-    void Update() { }
+    void Update() {
+        _ammoCount = playerStats.getGrenadeCount();
+    }
 }

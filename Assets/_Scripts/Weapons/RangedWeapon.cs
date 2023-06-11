@@ -7,10 +7,9 @@ public abstract class RangedWeapon : MonoBehaviour {
     protected bool _outOfAmmo = false;
     protected float _ammoSpeed;
     public Rigidbody ammunition;
+    public PlayerStats playerStats;
 
-    public virtual void addAmmo(int bulletToBeAdded) {
-        _ammoCount += bulletToBeAdded;
-    }
+    public abstract void addAmmo(int ammoToBeAdded);
 
     public virtual int getAmmo() {
         return _ammoCount;
@@ -30,7 +29,9 @@ public abstract class RangedWeapon : MonoBehaviour {
     protected abstract void shoot();
 
     // Start is called before the first frame update
-    void Start() { }
+    void Start() {
+        // playerStats = gameObject.GetComponentInParent<PlayerStats>();
+    }
 
     // Update is called once per frame
     void Update() { }

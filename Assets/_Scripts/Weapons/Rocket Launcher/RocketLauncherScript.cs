@@ -8,7 +8,7 @@ public class RocketLauncherScript : RangedWeapon {
     // private int _ammoCount;
 
     public override void addAmmo(int rocketToBeAdded) {
-        _ammoCount += rocketToBeAdded;
+        playerStats.addRocket(rocketToBeAdded);
     }
 
 
@@ -32,14 +32,18 @@ public class RocketLauncherScript : RangedWeapon {
 
     // Start is called before the first frame update
     void Start() {
-        _ammoCount = 5;
+        _ammoCount = playerStats.getRocketCount();
     }
 
     protected void OnEnable() {
+        _ammoCount = playerStats.getRocketCount();
         _ammoSpeed = 8f;
         StartCoroutine(fire());
     }
 
     // Update is called once per frame
-    void Update() { }
+    void Update() {
+        _ammoCount = playerStats.getRocketCount();
+
+    }
 }

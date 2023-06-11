@@ -8,7 +8,7 @@ public class RocketPackScript : CollectibleScript {
         base.OnTriggerEnter(other);
         if (other.gameObject.GetComponent<PlayerStats>()) {
             // Destroy(gameObject);
-            other.gameObject.GetComponentInChildren<RocketLauncherScript>().addAmmo(3);
+            other.gameObject.GetComponentInChildren<PlayerStats>().addRocket(3);
         }
     }
 

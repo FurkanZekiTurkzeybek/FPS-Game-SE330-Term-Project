@@ -12,7 +12,7 @@ public class AmmunitionUIScript : MonoBehaviour {
 
     private void setWeaponOnUI() {
         if (weaponWheel.getWeaponIndex() == 0) {
-            _ammoCount.text = "Bullet: " + rifleStats.getAmmoInBullet() + " / " + rifleStats.getAmmo();
+            _ammoCount.text = "Bullet: " + rifleStats.getAmmoInMag() + " / " + rifleStats.getAmmo();
         }
         else if (weaponWheel.getWeaponIndex() == 1) {
             _ammoCount.text = "Sword ";
@@ -32,7 +32,6 @@ public class AmmunitionUIScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        // _ammoCount.text = "Ammo: " + rifleStats.getAmmoInBullet() + " / " + rifleStats.getAmmo();
         setWeaponOnUI();
     }
 }
