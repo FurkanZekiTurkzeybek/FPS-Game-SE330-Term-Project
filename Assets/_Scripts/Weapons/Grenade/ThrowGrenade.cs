@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class ThrowGrenade : RangedWeapon {
     private Rigidbody _prefabGrenade;
-    private int _grenadeCount;
 
     public override void addAmmo(int grenadeToBeAdded) {
-        _grenadeCount += grenadeToBeAdded;
+        _ammoCount += grenadeToBeAdded;
     }
+
 
     protected override IEnumerator fire() {
         while (true) {
-            if (Input.GetKey(KeyCode.Mouse0) && _grenadeCount > 0) {
+            if (Input.GetKey(KeyCode.Mouse0) && _ammoCount > 0) {
                 shoot();
-                _grenadeCount--;
+                _ammoCount--;
                 yield return new WaitForSeconds(2f);
             }
 
@@ -30,7 +30,7 @@ public class ThrowGrenade : RangedWeapon {
 
     // Start is called before the first frame update
     void Start() {
-        _grenadeCount = 3;
+        _ammoCount = 3;
     }
 
     protected void OnEnable() {
@@ -39,7 +39,5 @@ public class ThrowGrenade : RangedWeapon {
     }
 
     // Update is called once per frame
-    void Update() {
-        Debug.Log($"Ammo count: {_grenadeCount}");
-    }
+    void Update() { }
 }

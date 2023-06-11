@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class RangedWeapon : MonoBehaviour {
-    protected int _ammoCount = 50;
+    protected int _ammoCount;
     protected bool _outOfAmmo = false;
     protected float _ammoSpeed;
     public Rigidbody ammunition;

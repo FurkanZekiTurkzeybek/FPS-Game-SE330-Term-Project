@@ -67,7 +67,9 @@ public class RifleScript : RangedWeapon {
 
 
     // Start is called before the first frame update
-    protected virtual void Start() { }
+    protected virtual void Start() {
+        _ammoCount = 50;
+    }
 
     protected void OnEnable() {
         _ammoSpeed = 75f;

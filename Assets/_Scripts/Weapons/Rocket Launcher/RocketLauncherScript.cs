@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class RocketLauncherScript : RangedWeapon {
     private Rigidbody _prefabrocket;
-    private int _rocketCount;
+    // private int _ammoCount;
 
     public override void addAmmo(int rocketToBeAdded) {
-        _rocketCount += rocketToBeAdded;
+        _ammoCount += rocketToBeAdded;
     }
 
 
     protected override IEnumerator fire() {
         while (true) {
-            if (Input.GetKey(KeyCode.Mouse0) && _rocketCount > 0) {
+            if (Input.GetKey(KeyCode.Mouse0) && _ammoCount > 0) {
                 shoot();
-                _rocketCount--;
+                _ammoCount--;
                 yield return new WaitForSeconds(1f);
             }
 
@@ -32,7 +32,7 @@ public class RocketLauncherScript : RangedWeapon {
 
     // Start is called before the first frame update
     void Start() {
-        _rocketCount = 5;
+        _ammoCount = 5;
     }
 
     protected void OnEnable() {

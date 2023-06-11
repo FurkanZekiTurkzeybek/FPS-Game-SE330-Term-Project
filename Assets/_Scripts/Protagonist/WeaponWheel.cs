@@ -7,36 +7,40 @@ public class WeaponWheel : MonoBehaviour {
     public GameObject playersSword;
     public GameObject playersRPG;
     public GameObject playersGrenade;
+    private int _weaponIndex;
+
+    private void selectWeapon(bool rifle, bool sword, bool rpg, bool grenade, int weaponIndex) {
+        playersRifle.SetActive(rifle);
+        playersSword.SetActive(sword);
+        playersRPG.SetActive(rpg);
+        playersGrenade.SetActive(grenade);
+        _weaponIndex = weaponIndex;
+    }
+
+    public int getWeaponIndex() {
+        return _weaponIndex;
+    }
 
     // Start is called before the first frame update
-    void Start() { }
+
+    void Start() {
+        _weaponIndex = 0;
+    }
 
     // Update is called once per frame
     void Update() {
         if (Input.GetKey(KeyCode.Alpha1)) {
-            playersRifle.SetActive(true);
-            playersSword.SetActive(false);
-            playersRPG.SetActive(false);
-            playersGrenade.SetActive(false);
+            selectWeapon(true, false, false, false, 0);
         }
 
         else if (Input.GetKey(KeyCode.Alpha2)) {
-            playersRifle.SetActive(false);
-            playersSword.SetActive(true);
-            playersRPG.SetActive(false);
-            playersGrenade.SetActive(false);
+            selectWeapon(false, true, false, false, 1);
         }
         else if (Input.GetKey(KeyCode.Alpha3)) {
-            playersRifle.SetActive(false);
-            playersSword.SetActive(false);
-            playersRPG.SetActive(true);
-            playersGrenade.SetActive(false);
+            selectWeapon(false, false, true, false, 2);
         }
         else if (Input.GetKey(KeyCode.G)) {
-            playersRifle.SetActive(false);
-            playersSword.SetActive(false);
-            playersRPG.SetActive(false);
-            playersGrenade.SetActive(true);
+            selectWeapon(false, false, false, true, 3);
         }
     }
 }
