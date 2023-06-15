@@ -15,6 +15,7 @@ public class ThrowGrenade : RangedWeapon {
             if (Input.GetKey(KeyCode.Mouse0) && _ammoCount > 0) {
                 shoot();
                 _ammoCount--;
+                playerStats.setGrenade(_ammoCount);
                 yield return new WaitForSeconds(2f);
             }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BossStats : EnemyStats {
+    
     public void getHeadShot(Collider other) {
         health -= 2 * other.gameObject.GetComponent<Ammunition>().getAmmunitionDamage();
     }

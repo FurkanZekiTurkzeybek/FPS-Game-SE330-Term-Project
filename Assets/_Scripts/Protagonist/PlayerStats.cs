@@ -46,9 +46,17 @@ public class PlayerStats : MonoBehaviour {
     public void setEnemyShot() {
         StartCoroutine(setShot());
     }
-    
+
     public void reload() {
         _bulletCount -= 10;
+    }
+
+    public void setGrenade(int newGrenadeCount) {
+        _grenadeCount = newGrenadeCount;
+    }
+
+    public void setRocket(int newRocketCount) {
+        _rocketCount = newRocketCount;
     }
 
     private IEnumerator setShot() {

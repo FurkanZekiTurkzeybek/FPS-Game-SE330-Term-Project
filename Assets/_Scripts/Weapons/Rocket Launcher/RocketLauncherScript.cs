@@ -17,6 +17,8 @@ public class RocketLauncherScript : RangedWeapon {
             if (Input.GetKey(KeyCode.Mouse0) && _ammoCount > 0) {
                 shoot();
                 _ammoCount--;
+                playerStats.setRocket(_ammoCount);
+
                 yield return new WaitForSeconds(1f);
             }
 
@@ -44,6 +46,5 @@ public class RocketLauncherScript : RangedWeapon {
     // Update is called once per frame
     void Update() {
         _ammoCount = playerStats.getRocketCount();
-
     }
 }
