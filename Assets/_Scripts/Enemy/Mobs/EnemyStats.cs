@@ -26,8 +26,7 @@ public class EnemyStats : MonoBehaviour {
     }
 
     protected virtual void die() {
-        // _animator.SetTrigger("die");
-        // Destroy(gameObject);
+        GameObject.FindWithTag("Player").GetComponent<PlayerStats>().increaseKillCount();
 
         StartCoroutine(dieCoroutine());
     }

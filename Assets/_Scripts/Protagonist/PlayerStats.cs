@@ -13,6 +13,9 @@ public class PlayerStats : MonoBehaviour {
     private int _bulletCount = 50;
     private int _rocketCount = 10;
     private int _grenadeCount = 3;
+    private int _enemyKillCount = 0;
+    private int _requiredKillCount = 20;
+
 
     public void addBullet(int bulletToBeAdded) {
         _bulletCount += bulletToBeAdded;
@@ -77,6 +80,18 @@ public class PlayerStats : MonoBehaviour {
 
     public bool getDead() {
         return isDead;
+    }
+
+    public int getKillCount() {
+        return _enemyKillCount;
+    }
+
+    public void increaseKillCount() {
+        _enemyKillCount++;
+    }
+
+    public int getRequieredKillCount() {
+        return _requiredKillCount;
     }
 
     public void increaseHealth(int healthToBeAdded) {
