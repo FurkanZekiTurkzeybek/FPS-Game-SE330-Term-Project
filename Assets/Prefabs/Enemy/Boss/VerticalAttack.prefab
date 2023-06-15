@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3836708296848662421}
   - component: {fileID: 207741880495630202}
   - component: {fileID: 4390070426211814896}
-  - component: {fileID: -1691935984004360280}
+  - component: {fileID: 48393030153840737}
   m_Layer: 0
   m_Name: VerticalAttack
   m_TagString: Untagged
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-1691935984004360280
+--- !u!114 &48393030153840737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,6 +124,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6374298536980372550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0752ed8d3c8068544bf7d4e7d9beb659, type: 3}
+  m_Script: {fileID: 11500000, guid: a0d300c46189081419c5315816c4dea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

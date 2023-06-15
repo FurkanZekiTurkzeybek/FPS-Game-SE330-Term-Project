@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Bullet : Ammunition {
     // protected Vector3 currentLocation;
-    private int _bulletDamage = 10;
+    protected int _bulletDamage = 10;
     // protected GameObject _targetEnemy;
     // protected PlayerStats _playerStats;
 

@@ -4,12 +4,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyBullet : Bullet {
-    private int _enemyBulletDamage = 20;
+    // private int _enemyBulletDamage = 20;
     protected override void OnTriggerEnter(Collider other) {
         if (other.gameObject.GetComponent<PlayerStats>()) {
             setTarget(other.gameObject);
             _targetEnemy = other.gameObject;
-            _targetEnemy.gameObject.GetComponent<PlayerStats>().receiveDamage(_enemyBulletDamage);
+            _targetEnemy.gameObject.GetComponent<PlayerStats>().receiveDamage(_bulletDamage);
             Destroy(gameObject);
         }
     }
@@ -17,6 +17,7 @@ public class EnemyBullet : Bullet {
     // Start is called before the first frame update
     new void Start() {
         base.Start();
+        _bulletDamage = 20;
     }
 
     // Update is called once per frame

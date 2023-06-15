@@ -6,6 +6,7 @@ using UnityEngine;
 public class BossAI : EnemyAI {
     public Rigidbody horizontalAttackPrefab;
     public Rigidbody verticalAttackPrefab;
+    private BossAttacker _bossAttackerScript;
 
 
     private IEnumerator bossFight() {
@@ -20,23 +21,18 @@ public class BossAI : EnemyAI {
 
     private IEnumerator verticalAttack(float verticalAttackCD) {
         while (true) {
-            combat(verticalAttackPrefab);
+            _bossAttackerScript.combat(verticalAttackPrefab);
             yield return new WaitForSeconds(verticalAttackCD);
         }
     }
 
     private IEnumerator horizontalAttack(float horizontalAttackCD) {
         while (true) {
-            combat(horizontalAttackPrefab);
+            _bossAttackerScript.combat(horizontalAttackPrefab);
             yield return new WaitForSeconds(horizontalAttackCD);
         }
     }
 
-    private void combat(Rigidbody attackPrefab) {
-        float attackSpeed = 5f;
-        attackPrefab = Instantiate(attackPrefab, transform.position, transform.rotation);
-        attackPrefab.velocity = transform.forward * attackSpeed;
-    }
 
     private IEnumerator wait(float waitTime) {
         yield return new WaitForSeconds(waitTime);
@@ -45,6 +41,7 @@ public class BossAI : EnemyAI {
 
     // Start is called before the first frame update
     protected override void Start() {
+        _bossAttackerScript = gameObject.GetComponentInChildren<BossAttacker>();
         playerLocation = GameObject.FindWithTag("Player").transform;
 
         StartCoroutine(bossFight());
