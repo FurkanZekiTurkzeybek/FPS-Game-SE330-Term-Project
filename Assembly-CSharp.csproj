@@ -46,7 +46,7 @@
      <Compile Include="Assets\_Scripts\Collectibles\MedkitScript.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Sword\Sword.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Grenade\ThrowGrenade.cs" />
-     <Compile Include="Assets\_Scripts\Enemy\MeleeEnemy.cs" />
+     <Compile Include="Assets\_Scripts\Enemy\Mobs\MeleeEnemy.cs" />
      <Compile Include="Assets\_Scripts\UI\ReloadUIScript.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\WeaponWheel.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Ammunition.cs" />
@@ -58,22 +58,25 @@
      <Compile Include="Assets\_Scripts\Weapons\Grenade\Grenade.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Rocket Launcher\RocketLauncherScript.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Rifle\Bullet.cs" />
-     <Compile Include="Assets\_Scripts\Enemy\RangedEnemy.cs" />
-     <Compile Include="Assets\_Scripts\Enemy\EnemyBullet.cs" />
+     <Compile Include="Assets\_Scripts\Enemy\Mobs\RangedEnemy.cs" />
+     <Compile Include="Assets\_Scripts\Enemy\Boss\BossStats.cs" />
+     <Compile Include="Assets\_Scripts\Enemy\Mobs\EnemyBullet.cs" />
      <Compile Include="Assets\_Scripts\UI\AmmunitionUIScript.cs" />
      <Compile Include="Assets\_Scripts\UI\HealthArmourUIScript.cs" />
-     <Compile Include="Assets\_Scripts\Enemy\EnemyAI.cs" />
+     <Compile Include="Assets\_Scripts\Enemy\Mobs\EnemyAI.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\GrenadePackScript.cs" />
-     <Compile Include="Assets\_Scripts\Enemy\EnemyRifle.cs" />
+     <Compile Include="Assets\_Scripts\Enemy\Mobs\EnemyRifle.cs" />
      <Compile Include="Assets\_Scripts\UI\HealthUIScript.cs" />
      <Compile Include="Assets\_Scripts\UI\HitUIScript.cs" />
-     <Compile Include="Assets\_Scripts\Enemy\EnemyStats.cs" />
+     <Compile Include="Assets\_Scripts\Enemy\Mobs\EnemyStats.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\ArmourPackScript.cs" />
+     <Compile Include="Assets\_Scripts\Enemy\Boss\BossAI.cs" />
      <Compile Include="Assets\_Scripts\Weapons\RangedWeapon.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\CameraFollow.cs" />
      <Compile Include="Assets\_Scripts\PowerUps\PowerUps.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\RocketPackScript.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\CollectibleScript.cs" />
+     <Compile Include="Assets\_Scripts\Enemy\Boss\BossAttackScript.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -82,10 +85,12 @@
      <Folder Include="Assets\_Scripts\Weapons" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <Folder Include="Assets\Materials\UIMaterials" />
+     <Folder Include="Assets\Prefabs\Enemy\Boss" />
      <Folder Include="Assets\_Scripts\Protagonist" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Animations\WeaponAnimations\RifleAnimations" />
      <Folder Include="Assets\_Scripts\Weapons\Grenade" />
+     <Folder Include="Assets\Materials\EnemyMaterials\Boss" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -93,6 +98,7 @@
      <Folder Include="Assets\Materials\WeaponMaterials\Sword" />
      <Folder Include="Assets\Animations\WeaponAnimations" />
      <Folder Include="Assets\Prefabs\Weapons" />
+     <Folder Include="Assets\Prefabs\Enemy\Mobs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\_Scripts\Collectibles" />
@@ -111,6 +117,8 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets\Materials\EnemyMaterials" />
+     <Folder Include="Assets\Materials\EnemyMaterials\Mobs" />
      <Folder Include="Assets\_Scripts\Weapons\Sword" />
      <Folder Include="Assets\Animations\EnemyAnimations" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
@@ -135,8 +143,10 @@
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Assets\_Scripts\Enemy" />
+     <Folder Include="Assets\_Scripts\Enemy\Mobs" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <Folder Include="Assets\_Scripts\Enemy\Boss" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Programming\Ides\Unity\Editors\2021.3.24f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

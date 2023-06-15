@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour {
     protected Transform playerLocation;
     private bool _playerDetected;
-    private float _enemyVelocity = 1;
+    protected float _enemyVelocity = 1;
     protected bool _isAttacking;
 
 
@@ -19,9 +19,7 @@ public class EnemyAI : MonoBehaviour {
 
     // Update is called once per frame
 
-    void Update() {
-        Debug.Log("I ve been shot");
-    }
+    void Update() { }
 
     public void setDetected() { //this method is to get the aggro of the enemy when its shot during patrol.
         //set the _playerDetected bool to true when the enemy is get shot.
@@ -57,9 +55,9 @@ public class EnemyAI : MonoBehaviour {
             if (Vector3.Distance(transform.position, playerLocation.position) >= 10) {
                 yield return StartCoroutine(patrol(180)); // switching to patrol mode
             }
-            
+
             combat();
-            
+
             yield return null;
         }
     }

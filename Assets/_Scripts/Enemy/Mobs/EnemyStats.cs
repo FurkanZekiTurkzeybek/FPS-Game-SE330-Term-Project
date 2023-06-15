@@ -5,14 +5,14 @@ using DG.Tweening;
 using UnityEngine;
 
 public class EnemyStats : MonoBehaviour {
-    private int _health = 100;
+    protected int health = 100;
     private Animator _animator;
     private LineRenderer[] _healthBar;
-    private Color _initialColour;
+    protected Color initialColour;
 
 
     private void recieveDamage(int damageReceived) {
-        _health -= damageReceived;
+        health -= damageReceived;
     }
 
     private void getShotTween() {
@@ -20,7 +20,7 @@ public class EnemyStats : MonoBehaviour {
         Material enemyMaterial = gameObject.GetComponent<Renderer>().material;
         enemyMaterial.DOColor(Color.red, tweenTime).SetLoops(1, LoopType.Restart)
             .OnComplete(() => {
-                enemyMaterial.DOColor(_initialColour, tweenTime)
+                enemyMaterial.DOColor(initialColour, tweenTime)
                     .SetLoops(1, LoopType.Restart);
             });
     }
@@ -41,7 +41,7 @@ public class EnemyStats : MonoBehaviour {
     public void getShot(int damageToBeReceived) {
         getShotTween();
 
-        if (damageToBeReceived >= _health) {
+        if (damageToBeReceived >= health) {
             die();
         }
 
@@ -57,33 +57,33 @@ public class EnemyStats : MonoBehaviour {
     void Start() {
         _animator = gameObject.GetComponent<Animator>();
         _healthBar = gameObject.GetComponentsInChildren<LineRenderer>();
-        _initialColour = gameObject.GetComponent<Renderer>().material.color;
+        initialColour = gameObject.GetComponent<Renderer>().material.color;
     }
 
     // Update is called once per frame
     void Update() {
-        if (_health == 0) {
+        if (health == 0) {
             die();
         }
 
 
-        if (_health < 100) {
+        if (health < 100) {
             _healthBar[0].enabled = false;
         }
 
-        if (_health < 80) {
+        if (health < 80) {
             _healthBar[1].enabled = false;
         }
 
-        if (_health < 60) {
+        if (health < 60) {
             _healthBar[2].enabled = false;
         }
 
-        if (_health < 40) {
+        if (health < 40) {
             _healthBar[3].enabled = false;
         }
 
-        if (_health < 20) {
+        if (health < 20) {
             _healthBar[4].enabled = false;
         }
     }
