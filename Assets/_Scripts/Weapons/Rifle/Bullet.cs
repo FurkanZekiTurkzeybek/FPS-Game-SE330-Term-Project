@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Bullet : Ammunition {
     // protected Vector3 currentLocation;
-    protected int _bulletDamage = 10;
+    // protected int _bulletDamage = 10;
     // protected GameObject _targetEnemy;
     // protected PlayerStats _playerStats;
 
@@ -15,12 +15,13 @@ public class Bullet : Ammunition {
         _targetEnemy = newTarget;
     }
 
+
     protected override void OnTriggerEnter(Collider other) {
         //I made this in a different method so I can overwrite it in the enemy rifle
         if (other.gameObject.GetComponent<EnemyStats>()) {
             _playerStats.setEnemyShot();
             _targetEnemy = other.gameObject;
-            _targetEnemy.gameObject.GetComponent<EnemyStats>().getShot(_bulletDamage);
+            _targetEnemy.gameObject.GetComponent<EnemyStats>().getShot(ammunitionDamage);
             Destroy(gameObject);
         }
     }
@@ -29,6 +30,7 @@ public class Bullet : Ammunition {
 
     protected override void Start() {
         base.Start();
+        ammunitionDamage = 10;
         // currentLocation = transform.position;
         // _playerStats = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<PlayerStats>();
     }

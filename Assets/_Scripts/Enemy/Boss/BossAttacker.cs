@@ -6,7 +6,6 @@ public class BossAttacker : EnemyRifle {
     public Rigidbody secondAttack;
 
     public void combat(Rigidbody attackPrefab) {
-        Debug.Log("Boss attack is working");
         float attackSpeed = 5f;
         attackPrefab = Instantiate(attackPrefab, transform.position, transform.rotation);
         attackPrefab.velocity = transform.forward * attackSpeed;

@@ -6,6 +6,11 @@ public abstract class Ammunition : MonoBehaviour {
     protected Vector3 currentLocation;
     protected GameObject _targetEnemy;
     protected PlayerStats _playerStats;
+    protected int ammunitionDamage;
+
+    public int getAmmunitionDamage() {
+        return this.ammunitionDamage;
+    }
 
     protected abstract void OnTriggerEnter(Collider other);
 

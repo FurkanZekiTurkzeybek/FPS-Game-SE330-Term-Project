@@ -46,7 +46,6 @@ public class BossAI : EnemyAI {
 
         StartCoroutine(bossFight());
         StartCoroutine(verticalAttack(10f));
-        StartCoroutine(wait(2f));
         StartCoroutine(horizontalAttack(5f));
     }
 

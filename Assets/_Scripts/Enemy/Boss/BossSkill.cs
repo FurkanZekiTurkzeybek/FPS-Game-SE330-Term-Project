@@ -6,7 +6,7 @@ public class BossSkill : EnemyBullet {
     // Start is called before the first frame update
     void Start() {
         base.Start();
-        _bulletDamage = 40;
+        ammunitionDamage = 40;
     }
 
     // Update is called once per frame
@@ -14,6 +14,7 @@ public class BossSkill : EnemyBullet {
         if (Vector3.Distance(currentLocation, gameObject.transform.position) > 50) {
             Destroy(gameObject);
         }
+
         Destroy(gameObject, 10f);
     }
 }

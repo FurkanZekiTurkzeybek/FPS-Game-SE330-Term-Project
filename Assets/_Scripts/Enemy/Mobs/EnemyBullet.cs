@@ -9,7 +9,7 @@ public class EnemyBullet : Bullet {
         if (other.gameObject.GetComponent<PlayerStats>()) {
             setTarget(other.gameObject);
             _targetEnemy = other.gameObject;
-            _targetEnemy.gameObject.GetComponent<PlayerStats>().receiveDamage(_bulletDamage);
+            _targetEnemy.gameObject.GetComponent<PlayerStats>().receiveDamage(ammunitionDamage);
             Destroy(gameObject);
         }
     }
@@ -17,7 +17,7 @@ public class EnemyBullet : Bullet {
     // Start is called before the first frame update
     new void Start() {
         base.Start();
-        _bulletDamage = 20;
+        ammunitionDamage = 20;
     }
 
     // Update is called once per frame

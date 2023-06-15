@@ -25,7 +25,7 @@ public class EnemyStats : MonoBehaviour {
             });
     }
 
-    private void die() {
+    protected virtual void die() {
         // _animator.SetTrigger("die");
         // Destroy(gameObject);
 
@@ -65,7 +65,6 @@ public class EnemyStats : MonoBehaviour {
         if (health == 0) {
             die();
         }
-
 
         if (health < 100) {
             _healthBar[0].enabled = false;
