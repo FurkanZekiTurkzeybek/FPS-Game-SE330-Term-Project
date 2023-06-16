@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour {
     private int _grenadeCount = 3;
     private int _enemyKillCount = 0;
     private int _requiredKillCount = 20;
+    private bool _readyForLevelTwo = false;
 
 
     public void addBullet(int bulletToBeAdded) {
@@ -94,6 +95,10 @@ public class PlayerStats : MonoBehaviour {
         return _requiredKillCount;
     }
 
+    public bool getReadyForLevelTwo() {
+        return _readyForLevelTwo;
+    }
+
     public void increaseHealth(int healthToBeAdded) {
         healthUIScript.changeSymbolSize();
         if (getHealth() < 100) {
@@ -157,6 +162,9 @@ public class PlayerStats : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         checkHealth();
+        if (_enemyKillCount == _requiredKillCount) {
+            _readyForLevelTwo = true;
+        }
 
         if (isDead == true) {
             // Debug.Log("You are dead");

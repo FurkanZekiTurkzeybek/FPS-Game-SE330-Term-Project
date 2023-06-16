@@ -49,11 +49,22 @@
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Folder Include="Assets\Plugins\SimpleNaturePack" />
      <Folder Include="Assets\Plugins\Demigiant" />
      <Folder Include="Assets\Plugins" />
+     <Folder Include="Assets\Plugins\SimpleNaturePack\Models" />
+     <Folder Include="Assets\Plugins\Lowpoly Nature &amp; Village Pack\PreMade Materials" />
      <Folder Include="Assets\Plugins\Demigiant\DOTween\Modules" />
+     <Folder Include="Assets\Plugins\SimpleNaturePack\Prefabs" />
      <Folder Include="Assets\Plugins\Demigiant\DOTween" />
+     <Folder Include="Assets\Plugins\Lowpoly Nature &amp; Village Pack\Prefabs" />
+     <Folder Include="Assets\Plugins\Lowpoly Nature &amp; Village Pack" />
+     <Folder Include="Assets\Plugins\Lowpoly Nature &amp; Village Pack\3D Models" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
+     <Folder Include="Assets\Plugins\SimpleNaturePack\Textures" />
+     <None Include="Assets\Plugins\Lowpoly Nature &amp; Village Pack\HowToSetup.txt" />
+     <Folder Include="Assets\Plugins\SimpleNaturePack\Materials" />
+     <Folder Include="Assets\Plugins\SimpleNaturePack\Scenes" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Programming\Ides\Unity\Editors\2021.3.24f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

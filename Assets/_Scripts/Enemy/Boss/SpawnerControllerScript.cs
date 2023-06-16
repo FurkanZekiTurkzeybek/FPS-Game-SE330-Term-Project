@@ -43,11 +43,11 @@ public class SpawnerControllerScript : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         _spawners = gameObject.GetComponentsInChildren<SpawnerScript>();
-        _spawnOrder.Add(armourPack);
-        _spawnOrder.Add(bulletPack);
-        _spawnOrder.Add(grenadePack);
-        _spawnOrder.Add(rocketPack);
-        _spawnOrder.Add(medkit);
+        // _spawnOrder.Add(armourPack);
+        // _spawnOrder.Add(bulletPack);
+        // _spawnOrder.Add(grenadePack);
+        // _spawnOrder.Add(rocketPack);
+        // _spawnOrder.Add(medkit);
     }
 
     // Update is called once per frame

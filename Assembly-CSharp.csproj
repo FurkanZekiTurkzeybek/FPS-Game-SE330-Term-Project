@@ -68,6 +68,7 @@
      <Compile Include="Assets\_Scripts\UI\HealthArmourUIScript.cs" />
      <Compile Include="Assets\_Scripts\Enemy\Boss\BossAttacker.cs" />
      <Compile Include="Assets\_Scripts\Enemy\Mobs\EnemyAI.cs" />
+     <Compile Include="Assets\_Scripts\UI\EnemyStatus.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\GrenadePackScript.cs" />
      <Compile Include="Assets\_Scripts\Enemy\Mobs\EnemyRifle.cs" />
      <Compile Include="Assets\_Scripts\UI\HealthUIScript.cs" />
@@ -81,7 +82,6 @@
      <Compile Include="Assets\_Scripts\Enemy\Boss\BossHead.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\RocketPackScript.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\CollectibleScript.cs" />
-     <Compile Include="Assets\_Scripts\UI\EnemyStatus.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
