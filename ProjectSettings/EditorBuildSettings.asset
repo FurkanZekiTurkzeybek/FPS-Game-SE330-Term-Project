@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/YouDied.unity
     guid: 1830bf895ae64f14d93d991a2af89cb1
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 62d28472e2f49c84a99cf9893c947a6e
   m_configObjects: {}

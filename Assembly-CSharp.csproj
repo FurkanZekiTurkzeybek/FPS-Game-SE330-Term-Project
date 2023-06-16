@@ -78,12 +78,12 @@
      <Compile Include="Assets\_Scripts\Collectibles\ArmourPackScript.cs" />
      <Compile Include="Assets\_Scripts\Enemy\Boss\BossAI.cs" />
      <Compile Include="Assets\_Scripts\Weapons\RangedWeapon.cs" />
+     <Compile Include="Assets\_Scripts\LevelControllers\DiedController.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\CameraFollow.cs" />
      <Compile Include="Assets\_Scripts\PowerUps\PowerUps.cs" />
      <Compile Include="Assets\_Scripts\Enemy\Boss\BossHead.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\RocketPackScript.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\CollectibleScript.cs" />
-     <Compile Include="Assets\_Scripts\LevelControllers\DiedController.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

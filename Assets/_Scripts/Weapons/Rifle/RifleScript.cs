@@ -53,6 +53,7 @@ public class RifleScript : RangedWeapon {
 
     // Start is called before the first frame update
     protected virtual void Start() {
+        
         _ammoCount = playerStats.getBulletCount();
     }
 

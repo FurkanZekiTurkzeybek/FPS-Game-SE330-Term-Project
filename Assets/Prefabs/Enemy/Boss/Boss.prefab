@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b3a763d6e19624587ff3959f24f1d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossAnimator: {fileID: 0}
 --- !u!1 &1572765945195721382
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b164a53ab13204d901312033e5d66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossAnimator: {fileID: 451940782}
   _bossStats: {fileID: 1572765944725682995}
 --- !u!1 &1572765945673467004
 GameObject:
@@ -393,6 +395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1572765945673467003}
+  - component: {fileID: 451940782}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -416,6 +419,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!95 &451940782
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572765945673467004}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 52f5aacf8e371864b91ff4af02c9a448, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &3101520153176965705
 PrefabInstance:
   m_ObjectHideFlags: 0

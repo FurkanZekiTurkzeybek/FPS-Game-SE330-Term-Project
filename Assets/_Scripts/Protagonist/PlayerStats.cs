@@ -166,11 +166,7 @@ public class PlayerStats : MonoBehaviour {
 
 
     // Start is called before the first frame update
-    void Start() {
-        // _bulletCount = 50;
-        // _rocketCount = 10;
-        // _grenadeCount = 3;
-    }
+    void Start() { }
 
     // Update is called once per frame
     void Update() {
