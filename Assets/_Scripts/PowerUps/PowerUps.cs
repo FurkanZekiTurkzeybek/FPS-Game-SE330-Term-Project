@@ -1,10 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUps : MonoBehaviour {
+    public CharacterWalk charWalk;
+
     // Start is called before the first frame update
-    void Start() { }
+    void Start() {
+        StartCoroutine(doubleJump(1f));
+    }
 
 
     public IEnumerator dashCoroutine() {
@@ -23,6 +28,36 @@ public class PowerUps : MonoBehaviour {
             yield return null;
         }
     }
+
+
+    private bool isJumpKeyDown = false;
+    private float doubleJumpDelay = 0.5f;
+    private float lastJumpTime = 0f;
+    private int jumpCount = 0;
+
+
+    public IEnumerator doubleJump(float jumpTime) {
+        while (true) {
+            // Determine if the character is grounded (e.g., using a grounded check function or variable)
+
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                if (Time.time - lastJumpTime < doubleJumpDelay) {
+                    if (charWalk.getConroller().isGrounded == false && jumpCount == 1) {
+                        charWalk.jump();
+                        jumpCount = 0;
+                    }
+                }
+                else {
+                    jumpCount = 1;
+                }
+
+                lastJumpTime = Time.time;
+            }
+
+            yield return null;
+        }
+    }
+
 
     // Update is called once per frame
     void Update() {
