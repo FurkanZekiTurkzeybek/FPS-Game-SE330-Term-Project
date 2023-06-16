@@ -14,8 +14,11 @@ public class PlayerStats : MonoBehaviour {
     private int _rocketCount = 10;
     private int _grenadeCount = 3;
     private int _enemyKillCount = 0;
-    private int _requiredKillCount = 20;
+
+
+    private int _requiredKillCount = 1;
     private bool _readyForLevelTwo = false;
+    private bool _firstLevelFinished = false;
 
 
     public void addBullet(int bulletToBeAdded) {
@@ -112,6 +115,14 @@ public class PlayerStats : MonoBehaviour {
         else if (_health >= 100) {
             _health = 100;
         }
+    }
+
+    public void changeLevels() {
+        _firstLevelFinished = true;
+    }
+
+    public bool getFirstLeveFinished() {
+        return _firstLevelFinished;
     }
 
 

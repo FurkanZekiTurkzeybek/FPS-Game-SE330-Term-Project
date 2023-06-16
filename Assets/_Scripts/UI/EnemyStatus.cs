@@ -14,6 +14,17 @@ public class EnemyStatus : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        _enemyKillCount.text = $"{playerStats.getKillCount()} / {playerStats.getRequieredKillCount()}";
+        if (playerStats.getFirstLeveFinished() == false) {
+            if (playerStats.getReadyForLevelTwo() == false) {
+                _enemyKillCount.text = $"{playerStats.getKillCount()} / {playerStats.getRequieredKillCount()}";
+            }
+
+            else {
+                _enemyKillCount.text = "Go to the door";
+            }
+        }
+        else {
+            //display the boss health bar at top of the screen
+        }
     }
 }

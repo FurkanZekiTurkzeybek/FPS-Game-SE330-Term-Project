@@ -82,6 +82,7 @@
      <Compile Include="Assets\_Scripts\Enemy\Boss\BossHead.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\RocketPackScript.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\CollectibleScript.cs" />
+     <Compile Include="Assets\_Scripts\LevelController.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
