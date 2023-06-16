@@ -17,7 +17,7 @@ public class PlayerStats : MonoBehaviour {
     private int _enemyKillCount = 0;
 
 
-    private int _requiredKillCount = 10;
+    private int _requiredKillCount = 5;
     private bool _readyForLevelTwo = false;
     private bool _firstLevelFinished = false;
 

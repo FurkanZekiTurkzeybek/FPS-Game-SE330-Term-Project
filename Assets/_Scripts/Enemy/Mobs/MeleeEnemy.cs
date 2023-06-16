@@ -7,7 +7,6 @@ public class MeleeEnemy : EnemyAI {
     private GameObject _player;
     private Animator _animator;
 
-    // protected bool _isAttacking;
     private float _meleeAttackCooldown = 5f;
     private RifleScript thisEnemyRifle;
     private int _enemySwordDamage = 10;

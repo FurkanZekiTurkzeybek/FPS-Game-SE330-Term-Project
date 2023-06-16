@@ -28,26 +28,26 @@ public class PowerUps : MonoBehaviour {
     }
 
 
-    private bool isJumpKeyDown = false;
-    private float doubleJumpDelay = 0.5f;
-    private float lastJumpTime = 0f;
-    private int jumpCount = 0;
+    private bool _jumpPressed = false;
+    private float _doubleJumpDelay = 0.5f;
+    private float _lastJumpTime = 0f;
+    private int _jumpCount = 0;
 
 
     public IEnumerator doubleJump(float jumpTime) {
         while (true) {
             if (Input.GetKeyDown(KeyCode.Space)) {
-                if (Time.time - lastJumpTime < doubleJumpDelay) {
-                    if (charWalk.getConroller().isGrounded == false && jumpCount == 1) {
+                if (Time.time - _lastJumpTime < _doubleJumpDelay) {
+                    if (charWalk.getConroller().isGrounded == false && _jumpCount == 1) {
                         charWalk.jump();
-                        jumpCount = 0;
+                        _jumpCount = 0;
                     }
                 }
                 else {
-                    jumpCount = 1;
+                    _jumpCount = 1;
                 }
 
-                lastJumpTime = Time.time;
+                _lastJumpTime = Time.time;
             }
 
             yield return null;

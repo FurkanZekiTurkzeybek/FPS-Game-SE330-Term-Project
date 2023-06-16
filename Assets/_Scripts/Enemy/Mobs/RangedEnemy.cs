@@ -9,7 +9,6 @@ public class RangedEnemy : EnemyAI {
         if (Vector3.Distance(transform.position, playerLocation.position) < 5) {
             //if player is closer than 1 unit start the coroutine
             if (_isAttacking == false) {
-                // StartCoroutine(attackRanged());
                 StartCoroutine(_enemyRifle.fire(true));
             }
             else {
@@ -24,7 +23,7 @@ public class RangedEnemy : EnemyAI {
         base.Start();
         _enemyRifle = gameObject.GetComponentInChildren<EnemyRifle>();
     }
-    
+
 
     // Update is called once per frame
     void Update() { }

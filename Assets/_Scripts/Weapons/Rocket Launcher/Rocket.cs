@@ -53,7 +53,7 @@ public class Rocket : Ammunition {
     protected override void Update() {
         // if (Vector3.Distance(currentLocation, gameObject.transform.position) > 15) {
         //     Destroy(gameObject);
-        // }
+        // }S
         base.Update();
 
         Destroy(gameObject, 10f);

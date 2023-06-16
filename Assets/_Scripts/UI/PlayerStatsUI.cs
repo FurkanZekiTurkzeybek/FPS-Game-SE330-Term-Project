@@ -8,16 +8,10 @@ using UnityEngine.UI;
 using Vector3 = UnityEngine.Vector3;
 
 public class PlayerStatsUI : MonoBehaviour {
-    //This class is some kind of "Abstract class" it's not used in any game object, instead it used as a interface for
-    //HealthUI and ArmourUI scripts
     public PlayerStats playerStats;
 
     public RectTransform symbolTransform;
 
-    // private Image[] _symbolImages;
-    // public Image symbolUpperPart;
-    // public Image symbolLowerPart;
-    // private Color _symbolInitialColour;
 
     protected void checkForStats(Func<int> statFunction, UnityEngine.UI.Image[] arrayOfBars) {
         if (statFunction() >= 80 && statFunction() < 100) {
