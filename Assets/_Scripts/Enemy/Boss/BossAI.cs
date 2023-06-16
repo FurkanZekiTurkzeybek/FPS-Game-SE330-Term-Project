@@ -45,8 +45,8 @@ public class BossAI : EnemyAI {
         playerLocation = GameObject.FindWithTag("Player").transform;
 
         StartCoroutine(bossFight());
-        StartCoroutine(verticalAttack(10f));
-        StartCoroutine(horizontalAttack(5f));
+        StartCoroutine(verticalAttack(7f));
+        StartCoroutine(horizontalAttack(3f));
     }
 
     // Update is called once per frame

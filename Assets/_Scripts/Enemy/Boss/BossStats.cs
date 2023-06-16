@@ -39,6 +39,7 @@ public class BossStats : EnemyStats {
 
     // Start is called before the first frame update
     void Start() {
+        initialColour = gameObject.GetComponent<Renderer>().material.color;
         _initialScale = gameObject.transform.localScale;
         health *= 5;
     }

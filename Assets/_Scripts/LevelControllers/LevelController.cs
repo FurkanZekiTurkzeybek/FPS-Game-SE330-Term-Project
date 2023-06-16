@@ -13,9 +13,6 @@ public class LevelController : MonoBehaviour {
 
                 SceneManager.LoadScene("LevelTwo");
             }
-            else {
-                Debug.Log("You are not yet ready for the second level.");
-            }
         }
     }
 

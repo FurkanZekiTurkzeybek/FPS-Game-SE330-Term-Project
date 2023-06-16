@@ -29,6 +29,8 @@ public class BossHead : BossStats {
 
     // Start is called before the first frame update
     void Start() {
+        initialColour = gameObject.GetComponent<Renderer>().material.color;
+
         _headInitialScale = gameObject.transform.localScale;
 
         changeHeadSizeTween();

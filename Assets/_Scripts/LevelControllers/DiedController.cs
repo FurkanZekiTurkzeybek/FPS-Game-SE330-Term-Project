@@ -11,7 +11,7 @@ public class DiedController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Input.GetKey(KeyCode.Space)) {
-            SceneManager.LoadScene("LevelOne");
+            SceneManager.LoadScene("MainScreen");
         }
     }
 }
