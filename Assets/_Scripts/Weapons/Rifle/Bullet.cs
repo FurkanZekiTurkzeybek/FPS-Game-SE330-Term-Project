@@ -4,13 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : Ammunition {
-    // protected Vector3 currentLocation;
-    // protected int _bulletDamage = 10;
-    // protected GameObject _targetEnemy;
-    // protected PlayerStats _playerStats;
-
-
-    //Protected and virtual is for enemy script
     protected void setTarget(GameObject newTarget) {
         _targetEnemy = newTarget;
     }
@@ -31,18 +24,13 @@ public class Bullet : Ammunition {
     protected override void Start() {
         base.Start();
         ammunitionDamage = 10;
-        // currentLocation = transform.position;
-        // _playerStats = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<PlayerStats>();
     }
 
 
     // Update is called once per frame
     protected virtual void Update() {
-        // if (Vector3.Distance(currentLocation, gameObject.transform.position) > 15) {
-        //     Destroy(gameObject);
-        // }
         base.Update();
 
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 5);
     }
 }

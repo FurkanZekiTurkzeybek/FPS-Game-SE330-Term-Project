@@ -21,6 +21,7 @@ public class BossAI : EnemyAI {
 
     private IEnumerator verticalAttack(float verticalAttackCD) {
         while (true) {
+            yield return new WaitForSeconds(1f);
             _bossAttackerScript.combat(verticalAttackPrefab);
             yield return new WaitForSeconds(verticalAttackCD);
         }
@@ -34,18 +35,13 @@ public class BossAI : EnemyAI {
     }
 
 
-    private IEnumerator wait(float waitTime) {
-        yield return new WaitForSeconds(waitTime);
-    }
-
-
     // Start is called before the first frame update
     protected override void Start() {
         _bossAttackerScript = gameObject.GetComponentInChildren<BossAttacker>();
         playerLocation = GameObject.FindWithTag("Player").transform;
 
         StartCoroutine(bossFight());
-        StartCoroutine(verticalAttack(7f));
+        StartCoroutine(verticalAttack(6f));
         StartCoroutine(horizontalAttack(3f));
     }
 

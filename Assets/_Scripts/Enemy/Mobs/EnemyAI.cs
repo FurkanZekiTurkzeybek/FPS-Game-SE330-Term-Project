@@ -21,10 +21,6 @@ public class EnemyAI : MonoBehaviour {
 
     void Update() { }
 
-    public void setDetected() { //this method is to get the aggro of the enemy when its shot during patrol.
-        //set the _playerDetected bool to true when the enemy is get shot.
-        //DO not implement this yet. You need to think of the range arrangement carefully add it at the later stages.
-    }
 
     //patrolling and following methods
     private IEnumerator patrol(float yAxis) {

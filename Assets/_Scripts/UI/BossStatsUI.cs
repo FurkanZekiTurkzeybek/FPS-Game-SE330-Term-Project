@@ -106,9 +106,6 @@ public class BossStatsUI : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        Debug.Log(bossStats.getHealth());
-
-
         checkForStats(bossStats.getHealth, _listOfBars);
     }
 }

@@ -22,7 +22,7 @@ public abstract class Ammunition : MonoBehaviour {
 
     // Update is called once per frame
     protected virtual void Update() {
-        if (Vector3.Distance(currentLocation, gameObject.transform.position) > 15) {
+        if (Vector3.Distance(currentLocation, gameObject.transform.position) > 25) {
             Destroy(gameObject);
         }
     }

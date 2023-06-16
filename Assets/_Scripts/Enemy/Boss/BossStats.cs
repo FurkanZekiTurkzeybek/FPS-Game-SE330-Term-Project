@@ -19,18 +19,24 @@ public class BossStats : EnemyStats {
     }
 
     protected override void die() {
-        // StartCoroutine(dieCoroutine());
-        // _isDead = true;
         float tweenTime = 1f;
-        transform.DOScale(_initialScale * 2, tweenTime).OnComplete(() => {
-            transform.DOScale(_initialScale, tweenTime).OnComplete(() => {
-                transform.DOScale(_initialScale * 2, tweenTime).OnComplete(() => died());
+        transform.DOScale(_initialScale * 2, tweenTime)
+            .OnComplete(() => {
+                transform.DOScale(_initialScale, tweenTime).OnComplete(() => {
+                    transform.DOScale(_initialScale * 2, tweenTime)
+                        .OnComplete(() => {
+                            transform.DOScale(_initialScale, tweenTime)
+                                .OnComplete(() => {
+                                    transform.DOScale(_initialScale * 2, tweenTime)
+                                        .OnComplete(() => died());
+                                });
+                        })
+                        ;
+                });
             });
-        });
     }
 
     private void died() {
-        Debug.Log("Died is working");
         SceneManager.LoadScene("GameOver");
         if (gameObject != null) {
             Destroy(gameObject);

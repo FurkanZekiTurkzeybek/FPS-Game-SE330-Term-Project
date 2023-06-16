@@ -7,7 +7,6 @@ public class RocketPackScript : CollectibleScript {
     void OnTriggerEnter(Collider other) {
         base.OnTriggerEnter(other);
         if (other.gameObject.GetComponent<PlayerStats>()) {
-            // Destroy(gameObject);
             other.gameObject.GetComponentInChildren<PlayerStats>().addRocket(3);
         }
     }

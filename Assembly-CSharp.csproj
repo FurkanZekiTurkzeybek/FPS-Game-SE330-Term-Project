@@ -43,7 +43,6 @@
   <ItemGroup>
      <Compile Include="Assets\_Scripts\UI\ArmourUIScript.cs" />
      <Compile Include="Assets\_Scripts\Protagonist\PlayerStats.cs" />
-     <Compile Include="Assets\_Scripts\Enemy\Boss\SpawnerScript.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\MedkitScript.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Sword\Sword.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Grenade\ThrowGrenade.cs" />
@@ -60,9 +59,9 @@
      <Compile Include="Assets\_Scripts\Weapons\Grenade\Grenade.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Rocket Launcher\RocketLauncherScript.cs" />
      <Compile Include="Assets\_Scripts\Weapons\Rifle\Bullet.cs" />
+     <Compile Include="Assets\_Scripts\LevelControllers\MainScreenController.cs" />
      <Compile Include="Assets\_Scripts\Enemy\Mobs\RangedEnemy.cs" />
      <Compile Include="Assets\_Scripts\Enemy\Boss\BossStats.cs" />
-     <Compile Include="Assets\_Scripts\Enemy\Boss\SpawnerControllerScript.cs" />
      <Compile Include="Assets\_Scripts\Enemy\Mobs\EnemyBullet.cs" />
      <Compile Include="Assets\_Scripts\UI\AmmunitionUIScript.cs" />
      <Compile Include="Assets\_Scripts\Enemy\Boss\BossSkill.cs" />
@@ -85,7 +84,6 @@
      <Compile Include="Assets\_Scripts\Collectibles\RocketPackScript.cs" />
      <Compile Include="Assets\_Scripts\UI\BossStatsUI.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\CollectibleScript.cs" />
-     <Compile Include="Assets\_Scripts\LevelControllers\MainScreenController.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

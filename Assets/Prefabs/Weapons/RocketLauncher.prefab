@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammunition: {fileID: -5883102485036056042, guid: 370dfef3020ad3a42881f7d1f1a416ec, type: 3}
+  playerStats: {fileID: 0}
 --- !u!1 &3136014375731182868
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +109,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 54d8c9067bce2664b9313b343be72fe4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
