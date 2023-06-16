@@ -84,6 +84,7 @@
      <Compile Include="Assets\_Scripts\Enemy\Boss\BossHead.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\RocketPackScript.cs" />
      <Compile Include="Assets\_Scripts\Collectibles\CollectibleScript.cs" />
+     <Compile Include="Assets\_Scripts\UI\BossStatsUI.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -100,6 +101,7 @@
      <Folder Include="Assets\Materials\EnemyMaterials\Boss" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <Folder Include="Assets\Animations\WeaponAnimations\GrenadeAnimations" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <Folder Include="Assets\Materials\WeaponMaterials\Sword" />

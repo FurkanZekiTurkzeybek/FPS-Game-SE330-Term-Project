@@ -55,7 +55,6 @@ public class Grenade : Ammunition {
                         .OnPlay(() => {
                             gameObject.GetComponent<Renderer>()
                                 .material.DOColor(Color.yellow, 1f);
-                            // _grenadeCollider.radius *= 2f;
 
                             if (other.gameObject.GetComponent<EnemyStats>()) {
                                 _playerStats.setEnemyShot();

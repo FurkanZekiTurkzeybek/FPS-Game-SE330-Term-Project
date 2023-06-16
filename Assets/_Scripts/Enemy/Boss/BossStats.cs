@@ -14,6 +14,10 @@ public class BossStats : EnemyStats {
         health -= 2 * other.gameObject.GetComponent<Ammunition>().getAmmunitionDamage();
     }
 
+    public int getHealth() {
+        return health;
+    }
+
     protected override void die() {
         // StartCoroutine(dieCoroutine());
         // _isDead = true;
@@ -36,7 +40,7 @@ public class BossStats : EnemyStats {
     // Start is called before the first frame update
     void Start() {
         _initialScale = gameObject.transform.localScale;
-        health *= 1;
+        health *= 5;
     }
 
     // Update is called once per frame
@@ -44,7 +48,5 @@ public class BossStats : EnemyStats {
         if (_isDead && _playingAnimation == false) {
             Destroy(gameObject);
         }
-
-        Debug.Log(health);
     }
 }

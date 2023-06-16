@@ -17,17 +17,25 @@ public class Rocket : Ammunition {
         if (_isDestroyed == false && other.gameObject.GetComponent<EnemyStats>()) {
             transform.DOMove(transform.position, twennPlayTime).OnPlay(() => {
                 transform.DOScale(_rocketInitialScale * explosionScale, twennPlayTime).OnPlay(() => {
-                        gameObject.GetComponent<Renderer>().material.DOColor(Color.yellow, 
-                            twennPlayTime/8).OnPlay(() => {
-                            _rocketCollider.radius = explosionScale;
-                            _rocketCollider.height = explosionScale;
-                            _playerStats.setEnemyShot();
-                            _targetEnemy = other.gameObject;
-                            _targetEnemy.gameObject.GetComponent<EnemyStats>().getShot(_rocketDamage);
-                        });
-                    })
-                    .OnComplete(() => Destroy(gameObject)).OnComplete(() => _isDestroyed = true);
+                    gameObject.GetComponent<Renderer>().material.DOColor(Color.yellow,
+                        twennPlayTime / 8).OnPlay(() => {
+                        _rocketCollider.radius = explosionScale;
+                        _rocketCollider.height = explosionScale;
+                        _playerStats.setEnemyShot();
+                        _targetEnemy = other.gameObject;
+                        _targetEnemy.gameObject.GetComponent<EnemyStats>().getShot(_rocketDamage);
+                    });
+                }).OnComplete(() => {
+                    safeDestroy();
+                    _isDestroyed = true;
+                });
             });
+        }
+    }
+
+    private void safeDestroy() {
+        if (gameObject != null) {
+            Destroy(gameObject);
         }
     }
 
