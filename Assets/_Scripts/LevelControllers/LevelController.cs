@@ -9,7 +9,6 @@ public class LevelController : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.GetComponent<PlayerStats>()) {
             if (other.gameObject.GetComponent<PlayerStats>().getReadyForLevelTwo()) {
-                // Navigate to the next level.
                 SceneManager.LoadScene("LevelTwo");
             }
             else {
