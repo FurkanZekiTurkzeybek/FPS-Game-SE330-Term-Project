@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ThrowGrenade : RangedWeapon {
     private Rigidbody _prefabGrenade;
+    private Animator _armAnimator;
 
     public override void addAmmo(int grenadeToBeAdded) {
         playerStats.addGrenade(grenadeToBeAdded);
@@ -13,6 +14,7 @@ public class ThrowGrenade : RangedWeapon {
     protected override IEnumerator fire() {
         while (true) {
             if (Input.GetKey(KeyCode.Mouse0) && _ammoCount > 0) {
+                _armAnimator.SetTrigger("throwPressed");
                 shoot();
                 _ammoCount--;
                 playerStats.setGrenade(_ammoCount);
@@ -35,6 +37,7 @@ public class ThrowGrenade : RangedWeapon {
     }
 
     protected void OnEnable() {
+        _armAnimator = gameObject.GetComponentInChildren<Animator>();
         _ammoCount = playerStats.getGrenadeCount();
         _ammoSpeed = 10f;
         StartCoroutine(fire());
